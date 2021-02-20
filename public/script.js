@@ -59,6 +59,18 @@ document.querySelector('.form').addEventListener('submit', e => {
     input.value = '';
 });
 
+
+
+// event listener when user press enter key
+document.querySelector("#text").onkeydown = (e) => {
+  // enter key is pressed without shift key
+  if (e.keyCode === 13 && !e.shiftKey) {
+    e.preventDefault();
+    submitMessage();
+  }
+};
+
+
 // receive the message from server then add it to html
 socket.on('newMessageToClient', data => {
     const notStranger = data.id === socket.id;

@@ -20,7 +20,6 @@ socket.on('numberOfOnline', size => {
 // event listener for search
 document.querySelector('#start').addEventListener('click', () => {
     // searching for someone to talk to
-    e.target.innerHTML = "Searching";
     socket.emit('start', socket.id);
 });
 

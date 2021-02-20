@@ -1,5 +1,10 @@
 // connect to main namespace
-const socket = io('/');
+const socket = io.connect( 'ws://127.0.0.1:3000', {
+    reconnection: true,
+    reconnectionDelay: 1000,
+    reconnectionDelayMax : 5000,
+    reconnectionAttempts: Infinity
+  } );
 
 const conversation = document.querySelector('.conversation');
 

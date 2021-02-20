@@ -1,5 +1,5 @@
 // connect to main namespace
-const socket = io.connect( 'ws://127.0.0.1:3000/', {
+const socket = io.connect( 'https://omegle-clone-t4qm7.ondigitalocean.app/', {
     reconnection: true,
     reconnectionDelay: 1000,
     reconnectionDelayMax : 5000,
